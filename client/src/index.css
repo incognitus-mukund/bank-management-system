@@ -1,0 +1,142 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 20 14.3% 4.1%;
+  --muted: 60 4.8% 95.9%;
+  --muted-foreground: 25 5.3% 44.7%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 20 14.3% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 20 14.3% 4.1%;
+  --border: 20 5.9% 90%;
+  --input: 20 5.9% 90%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 60 4.8% 95.9%;
+  --secondary-foreground: 24 9.8% 10%;
+  --accent: 60 4.8% 95.9%;
+  --accent-foreground: 24 9.8% 10%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 60 9.1% 97.8%;
+  --ring: 20 14.3% 4.1%;
+  --radius: 0.5rem;
+  
+  /* Terminal Theme Colors */
+  --terminal-bg: 220 13% 4%; /* #0F172A */
+  --terminal-secondary: 220 13% 18%; /* #1E293B */
+  --terminal-border: 215 14% 34%; /* #334155 */
+  --terminal-text: 210 40% 98%; /* #F8FAFC */
+  --terminal-success: 158 64% 52%; /* #10B981 */
+  --terminal-warning: 43 96% 56%; /* #F59E0B */
+  --terminal-error: 0 84% 60%; /* #EF4444 */
+  --terminal-accent: 213 94% 68%; /* #3B82F6 */
+}
+
+.dark {
+  --background: 240 10% 3.9%;
+  --foreground: 0 0% 98%;
+  --muted: 240 3.7% 15.9%;
+  --muted-foreground: 240 5% 64.9%;
+  --popover: 240 10% 3.9%;
+  --popover-foreground: 0 0% 98%;
+  --card: 240 10% 3.9%;
+  --card-foreground: 0 0% 98%;
+  --border: 240 3.7% 15.9%;
+  --input: 240 3.7% 15.9%;
+  --primary: 207 90% 54%;
+  --primary-foreground: 211 100% 99%;
+  --secondary: 240 3.7% 15.9%;
+  --secondary-foreground: 0 0% 98%;
+  --accent: 240 3.7% 15.9%;
+  --accent-foreground: 0 0% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --ring: 240 4.9% 83.9%;
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+  }
+}
+
+/* Terminal specific styles */
+.terminal-window {
+  background: linear-gradient(135deg, hsl(var(--terminal-bg)) 0%, hsl(var(--terminal-secondary)) 100%);
+  border: 1px solid hsl(var(--terminal-border));
+  box-shadow: 0 0 30px rgba(16, 185, 129, 0.1);
+}
+
+.terminal-text {
+  color: hsl(var(--terminal-text));
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.terminal-glow {
+  text-shadow: 0 0 10px currentColor;
+}
+
+.ascii-art {
+  white-space: pre-line;
+  line-height: 1.2;
+}
+
+.fade-in {
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0.3; }
+}
+
+.menu-item {
+  transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+  background-color: rgba(59, 130, 246, 0.1);
+  border-color: hsl(var(--terminal-accent));
+}
+
+.terminal-input {
+  background: hsl(var(--terminal-bg));
+  border: 1px solid hsl(var(--terminal-border));
+  color: hsl(var(--terminal-text));
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+}
+
+.terminal-input:focus {
+  outline: none;
+  border-color: hsl(var(--terminal-accent));
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+.status-message {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.transaction-item {
+  transition: all 0.2s ease;
+}
+
+.transaction-item:hover {
+  background-color: rgba(248, 250, 252, 0.05);
+}
