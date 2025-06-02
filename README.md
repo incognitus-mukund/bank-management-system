@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Bank Management System
 
 A modern web-based Bank Management System that replicates the functionality and interface of a C console application. This project transforms a traditional command-line banking program into an interactive web application while maintaining the original terminal aesthetic.
@@ -150,3 +151,7 @@ The application features a terminal-style interface with:
 ---
 
 **From Console to Web**: Bringing classic C programming into the modern web era while preserving the original user experience.
+=======
+# bank-management-system
+Web-based Bank Management System - C console application converted to modern web interface
+>>>>>>> 16f7a982d264335966afa50b4c9acf25a118af51
