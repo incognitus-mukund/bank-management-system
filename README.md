@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Bank Management System
 
 A modern web-based Bank Management System that replicates the functionality and interface of a C console application. This project transforms a traditional command-line banking program into an interactive web application while maintaining the original terminal aesthetic.
@@ -45,7 +44,7 @@ This application converts a C console banking program into a full-featured web a
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/yourusername/bank-management-system.git
+git clone https://github.com/incognitus-mukund/bank-management-system.git
 cd bank-management-system
 ```
 
@@ -134,10 +133,6 @@ This project is open source and available under the [MIT License](LICENSE).
 - Shadcn/ui for the component library
 - Tailwind CSS for the styling framework
 - React and TypeScript communities for excellent documentation
-
-## Demo
-
-[Live Demo](https://your-app-name.replit.app) - Try the application online
 
 ## Screenshots
 
